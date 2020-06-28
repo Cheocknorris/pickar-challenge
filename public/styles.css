@@ -16,6 +16,7 @@ body {
     width: 100vw;
     height: 80rem;
     background-color: #EEF4F7;
+    overflow: hidden;
 }
 
 .upper-row {

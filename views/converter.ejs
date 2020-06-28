@@ -15,11 +15,12 @@
                     <form action="/" method="post">
                         <div class="converter__input-container">
                             <label for="amount">Amount</label>
-                            <input id="amount" type="text" name="amount">
+                            <input id="amount" type="text" name="amount" placeholder="Enter amount">
                         </div>
                         <div class="converter__input-container converter__input-container--middle">
                             <label class="converter__label" for="from">From</label>
                             <select class="from" name="from">
+                                <option value="" disabled selected>Select currency</option>
                                 <option value="EUR">EUR</option>
                                 <option value="USD">USD</option>
                                 <option value="CHF">CHF</option>
@@ -29,6 +30,7 @@
                         <div class="converter__input-container converter__input-container--right">
                             <label for="to">To</label>
                             <select class="to" name="to">
+                                <option value="" disabled selected>Select currency</option>
                                 <option value="EUR">EUR</option>
                                 <option value="USD">USD</option>
                                 <option value="CHF">CHF</option>

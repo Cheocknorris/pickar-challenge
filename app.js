@@ -41,6 +41,11 @@ app.post("/", function(req, res) {
         let conversion = amount * usdToEur;
         // console.log("conversion: ", conversion);
         res.render('converter', {amount: amount, from: from, to: to, conversion: conversion});
+    } else if (from === "EUR" && to === "USD") {
+        // console.log("from USD to EUR");
+        let conversion = amount / usdToEur;
+        // console.log("conversion: ", conversion);
+        res.render('converter', {amount: amount, from: from, to: to, conversion: conversion});
     } else if (from === "USD" && to === "CHF") {
         let conversion = amount * usdToChf;
         res.render('converter', {amount: amount, from: from, to: to, conversion: conversion});
