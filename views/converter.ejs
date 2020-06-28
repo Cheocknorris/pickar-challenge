@@ -15,7 +15,7 @@
                     <form action="/" method="post">
                         <div class="converter__input-container">
                             <label for="amount">Amount</label>
-                            <input id="amount" type="text" name="amount" value="1">
+                            <input id="amount" type="text" name="amount">
                         </div>
                         <div class="converter__input-container converter__input-container--middle">
                             <label class="converter__label" for="from">From</label>
@@ -40,8 +40,8 @@
         </div>
         <div class="lower-row">
             <div class="result">
-                <h3> <%= foo %> EUR =</h3>
-                <h1>1.12392 USD</h1>
+                <h3> <%= amount %> <%= from %> =</h3>
+                <h1> <%= conversion %> <%= to %></h1>
             </div>
         </div>
 
