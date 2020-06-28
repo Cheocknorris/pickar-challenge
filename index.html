@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Currency Converter</title>
+    </head>
+    <body>
+        <div class="upper-row">
+            <img class="logo" src="./images/pickar_logo_white.png" alt="">
+                <h1 class="title">Convert currencies in real-time.</h1>
+                <div class="converter">
+                    <form action="/" method="post">
+                        <div class="converter__input-container">
+                            <label for="amount">Amount</label>
+                            <input id="amount" type="text" name="amount">
+                        </div>
+                        <div class="converter__input-container converter__input-container--middle">
+                            <label class="converter__label" for="from">From</label>
+                            <select class="from" name="from">
+                                <option value="EUR">EUR</option>
+                                <option value="USD">USD</option>
+                                <option value="CHF">CHF</option>
+                            </select>
+                        </div>
+                        <img class="switcher" src="./images/switcher.png" alt="">
+                        <div class="converter__input-container converter__input-container--right">
+                            <label for="to">To</label>
+                            <select class="to" name="to">
+                                <option value="EUR">EUR</option>
+                                <option value="USD">USD</option>
+                                <option value="CHF">CHF</option>
+                            </select>
+                        </div>
+                        <button class="converter__btn" type="subit">Convert</button>
+                    </form>
+                </div>
+        </div>
+        <div class="lower-row">
+            <div class="result">
+                <h3>1 EUR =</h3>
+                <h1>1.12392 USD</h1>
+            </div>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,163 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; }
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 80rem;
+    background-color: #EEF4F7;
+}
+
+.upper-row {
+    background-color: #363A3E;
+    color: white;
+    height: 40rem;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 4rem;
+    left: 6rem;
+}
+
+.title {
+    position: absolute;
+    top: 19.9rem;
+    left: 6rem;
+    color: #FFF;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4.7rem;
+}
+
+.converter {
+    position: relative;
+    top: 33.6rem;
+    left: 6rem;
+    height: 12.8rem;
+    width: 90.5rem;
+    background-color: #FFF;
+    color: #363A3E;
+    border-radius: 2rem;
+    box-shadow: 0 .5rem 3rem rgba(0, 0, 0, 0.2);
+}
+
+.converter label {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    margin-left: .5rem;
+}
+
+.converter__input-container {
+    /* background-color: red; */
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20rem;
+    height: 6.4rem;
+    top: 2.8rem;
+    left: 4rem;
+}
+
+.converter__input-container--middle {
+    margin-left: 2rem;
+}
+
+.switcher {
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    top: 2.8rem;
+    left: 48rem;
+    top: 50%;
+}
+
+.converter__input-container--right {
+    margin-left: 4.4rem;
+}
+
+/* .converter__input-container--right {
+    margin-left: 4rem;
+} */
+
+#amount {
+    height: 40px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: rgba(54,58,62,0.08);
+    border: none;
+    color: #363A3E;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 19px;
+    padding 0: 1.6rem;
+}
+
+.converter__input-container select {
+    height: 40px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: rgba(54,58,62,0.08);
+    border: none;
+    color: #363A3E;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 0 1.6rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url("./images/path.png") 90% / 7% no-repeat #eee;
+}
+
+.converter__btn {
+    position: absolute;
+    top: 5.2rem;
+    right: 4rem;
+    height: 4rem;
+    width: 11.7rem;
+    border-radius: .8rem;
+    background-color: #FF4F54;
+    color: #FFF;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.9rem;
+}
+
+.lower-row {
+    position: relative;
+}
+
+.result {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 7.8rem;
+    top: 12.8rem;
+    left: 11rem;
+    color: #363A3E;
+}
+
+.result h3 {
+    font-size: 2rem;
+    line-height: 2.3rem;
+}
+
+.result h1 {
+    font-size: 4rem;
+    line-height: 4.7rem;
+}
