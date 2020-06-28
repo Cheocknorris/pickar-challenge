@@ -98,6 +98,7 @@ body {
     border-radius: 8px;
     background-color: rgba(54,58,62,0.08);
     border: none;
+    padding-left: 1.6rem;
     color: #363A3E;
     font-family: Roboto;
     font-size: 16px;
@@ -119,7 +120,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background: url("./images/path.png") 90% / 7% no-repeat #eee;
+    background: url("path.png") 90% / 7% no-repeat #eee;
 }
 
 .converter__btn {
