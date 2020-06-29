@@ -49,8 +49,18 @@ app.post("/", function(req, res) {
     } else if (from === "USD" && to === "CHF") {
         let conversion = amount * usdToChf;
         res.render('converter', {amount: amount, from: from, to: to, conversion: conversion});
+    } else if (from === "CHF" && to === "USD") {
+        let conversion = amount / usdToChf;
+        res.render('converter', {amount: amount, from: from, to: to, conversion: conversion});
+    } else if (from === "EUR" && to === "CHF") {
+        let usd = 1 / usdToEur;
+        let conversion = amount * (usd * usdToChf);
+        res.render('converter', {amount: amount, from: from, to: to, conversion: conversion});
+    } else if (from === "CHF" && to === "EUR") {
+        let usd = 1 / usdToChf;
+        let conversion = amount * (usd * usdToEur);
+        res.render('converter', {amount: amount, from: from, to: to, conversion: conversion});
     }
-    // res.render('converter', {amount: amount, from: from, to: to});
   })
   .catch(err => {
     console.log(err);
