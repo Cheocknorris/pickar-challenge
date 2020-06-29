@@ -60,6 +60,9 @@ app.post("/", function(req, res) {
         let usd = 1 / usdToChf;
         let conversion = amount * (usd * usdToEur);
         res.render('converter', {amount: amount, from: from, to: to, conversion: conversion});
+    } else if (from === to) {
+        let conversion = amount * 1;
+        res.render('converter', {amount: amount, from: from, to: to, conversion: conversion});
     }
   })
   .catch(err => {
