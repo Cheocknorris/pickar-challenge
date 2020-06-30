@@ -90,10 +90,6 @@ body {
     margin-left: 4.4rem;
 }
 
-/* .converter__input-container--right {
-    margin-left: 4rem;
-} */
-
 #amount {
     height: 4rem;
     width: 20rem;
@@ -138,6 +134,11 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.9rem;
+    cursor: pointer;
+}
+
+.converter__btn:hover{
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
 
 .lower-row {
@@ -245,6 +246,5 @@ body {
         top: 55rem;
         left: 9rem;
     }
-
 
 }
