@@ -1,7 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-// const https = require('https');
+const secrets = require("./secrets");
 const axios = require('axios');
+
+const key = secrets.API_KEY;
 
 let fromArr = ["EUR", "USD", "CHF"];
 let toArr = ["USD", "EUR", "CHF"];
@@ -22,9 +24,8 @@ app.get('/', function(req, res) {
 
 
 app.post("/", function(req, res) {
-    axios.get("http://api.currencylayer.com/live?access_key=03def39c43ab8983ddd770cb0bd621b6")
+    axios.get("http://api.currencylayer.com/live?access_key=" + key)
     .then(response => {
-    console.log(response.data.quotes);
     let amount = req.body.amount;
     let from = req.body.from;
     let to = req.body.to;
@@ -32,14 +33,9 @@ app.post("/", function(req, res) {
     let usdToChf = response.data.quotes.USDCHF;
     if (from === "USD" && to === "EUR") {
         let conversion = amount * usdToEur;
-        console.log("conversion: ", conversion);
         res.render('converter', {amount: amount, from: from, to: to, conversion: conversion, fromCurrencies: fromArr, toCurrencies: toArr});
     } else if (from === "EUR" && to === "USD") {
-        console.log("from", from);
-        console.log("to", to);
-        console.log("usdToEur", usdToEur)
         let conversion = amount / usdToEur;
-        console.log("conversion: ", conversion);
         res.render('converter', {amount: amount, from: from, to: to, conversion: conversion, fromCurrencies: fromArr, toCurrencies: toArr});
     } else if (from === "USD" && to === "CHF") {
         let conversion = amount * usdToChf;
